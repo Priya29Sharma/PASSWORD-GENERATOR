@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="password.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2? family-Poppins:wght@300;400;500;600;700;800;900& display=swap' rel='stylesheet'>
+    <!-- @import url("https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;800;900&display=swap");  -->
+</head>
+<body>
+    <div class="desktop-container">
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="input-box">
+               <input placeholder="OTYSTBYI" readonly class="display" id="password-display">
+               <button class="copy-btn">
+                <img  src="./images/copy-img.jpg" alt="copy" width="18px" height="18px">
+               </button>
+            </div>
+            <div class="input-container">
+    
+                <!-- password length section -->
+    
+                <div class="password-length">
+                    <p><b>Password Length</b></p>
+                    <p class="password-number">0</p>
+                </div>
+    
+                <!-- slider section -->
+    
+                <div>
+                    <input type="range" min="4" max="20"  class="slider" id="myRange" step="1">
+                </div>
+    
+                <!-- checkbox div -->
+                <div>
+                    <input type="checkbox" class="checkbox" id="uppercase" onclick="handleCheckBoxes('uppercase')">
+                    <label>Include Uppercase</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="lowercase" onclick="handleCheckBoxes('lowercase')">
+                    <label>Include Lowercase</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="numbers" onclick="handleCheckBoxes('number')">
+                    <label>Include Number</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="symbols" onclick="handleCheckBoxes('symbol')">
+                    <label>Include Symbol</label>
+                </div>
+                <!-- strength section -->
+    
+                <div class="strength">
+                    <p style="color:#fff;">Strength</p>
+                    <div class="strength-icon"></div>
+                </div>
+                <button class="generate-password">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="password.js"></script>
+</body>
+</html>
